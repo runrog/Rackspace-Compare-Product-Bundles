@@ -1,12 +1,9 @@
-## Node + EJS boilderplate
+## Rackspace Bundle Compare Pattern
+Currently a WIP.
 
-### This boilerplate includes the following
-* Gulp (automation)
-* EJS (templating)
-* BrowserSync (live reloading)
-* SASS
-* ES6 (gulp-babel)
-* eslint (js linting)
+![alt text](screen-shot.png "")
+
+[See Live Demo](http://b908c4040f36e92b6c1d-5868806ce06e7becdec4f0e74f1f735c.r92.cf1.rackcdn.com/static/bundle-compare/index.html)
 
 ### Install
 ```
