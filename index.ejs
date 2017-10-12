@@ -4,17 +4,283 @@
     <% var env, path = '' ;%>
     <% if (env === 'dev') { path = 'dist/'; } %>
     <meta charset="utf-8">
-    <title>Node + EJS Biolerplate</title>
+    <title>Rackspace Dedicated Bundles</title>
     <link rel="stylesheet" type="text/css" href="<%- path %>css/main.min.css">
-    <script src="<%- path %>js/app.min.js" charset="utf-8"></script>
   </head>
   <body>
-      <% include partials/header %>
-      <p>Node JS</p>
-      <p>EJS</p>
-      <p>SASS</p>
-      <p>Gulp</p>
-      <p>BrowserSync</p>
-      <p>ES6/Babel</p>
+      <div class="section">
+        <div class="container">
+
+        </div>
+      </div>
+
+      <div class="section section-odd">
+        <div class="container">
+
+          <% include partials/header %>
+
+          <div class="rsBundles-container">
+            <div class="rsBundles-bullets"></div>
+            <div class="rsBundles-legendContainer">
+              <div class="rsBundles-leftArrow">
+                <a href="#" class="rsBundles-leftArrow-icon" data-rs-bundles="left-btn"></a>
+              </div>
+              <div class="rsBundles-centerKeys">
+                <!-- Interchangeable area -->
+                <!-- Set 1 -->
+                <div class="rsBundles-centerKeys-changeable rsBundles-active">
+                  <div class="rsBundles-centerKeys-inner">
+                    Server & Processor
+                  </div>
+                  <div class="rsBundles-centerKeys-inner">
+                    Firewall
+                  </div>
+                  <div class="rsBundles-centerKeys-inner">
+                    Database License
+                  </div>
+                  <div class="rsBundles-centerKeys-inner">
+                    Starting at
+                  </div>
+                </div>
+                <!-- Set 2 -->
+                <div class="rsBundles-centerKeys-changeable">
+                  <div class="rsBundles-centerKeys-inner">
+                    Best Fit Workloads
+                  </div>
+                  <div class="rsBundles-centerKeys-inner">
+                    RAM
+                  </div>
+                  <div class="rsBundles-centerKeys-inner">
+                    Local Storage
+                  </div>
+                  <div class="rsBundles-centerKeys-inner">
+                    30 Day Satisfaction Guarantee*
+                  </div>
+                </div>
+                <!-- Set 3 -->
+                <div class="rsBundles-centerKeys-changeable">
+                  <div class="rsBundles-centerKeys-inner">
+                    Free Managed Backup**
+                  </div>
+                </div>
+                <!-- / End interchangeable area -->
+              </div>
+              <div class="rsBundles-rightArrow rsBundles-activeArrow">
+                <a href="#" class="rsBundles-rightArrow-icon" data-rs-bundles="right-btn"></a>
+              </div>
+            </div>
+            <div class="rsBundles-tableContainer">
+
+
+              <div class="rsBundles-card">
+                <div class="rsBundles-cardName">Starter</div>
+                <div class="rsBundles-cardCompare-container">
+                  <!-- Interchangeable area -->
+                  <!-- Set 1 -->
+                  <div class="rsBundles-cardCompare-changeable rsBundles-active">
+                    <div class="rsBundles-cardCompare-inner">
+                      key 1 spec for starter.Dell PowerEdge with Intel (2.5GHz / 6 cores)
+                    </div>
+                    <div class="rsBundles-cardCompare-inner">
+                      <span class="rsBundles-check"></span>
+                    </div>
+                    <div class="rsBundles-cardCompare-inner">
+                      none
+                    </div>
+                    <div class="rsBundles-cardCompare-inner">
+                      <span class="rsBundles-price">$449</span> /m
+                    </div>
+                  </div>
+                  <!-- Set 2 -->
+                  <div class="rsBundles-cardCompare-changeable">
+                    <div class="rsBundles-cardCompare-inner">
+                      <ul class="rsBundles-list">
+                        <li>Test/dev</li>
+                        <li>Intranet</li>
+                        <li>Small public-facing websites (e.g., WordPress)</li>
+                        <li>CRM solutions</li>
+                        <li>Simple backup or file servers</li>
+                      </ul>
+                    </div>
+                    <div class="rsBundles-cardCompare-inner">
+                      32 GB
+                    </div>
+                    <div class="rsBundles-cardCompare-inner">
+                      5x 300GB 15K SAS
+                    </div>
+                    <div class="rsBundles-cardCompare-inner">
+                      <span class="rsBundles-check"></span>
+                    </div>
+                  </div>
+                  <!-- Set 3 -->
+                  <div class="rsBundles-cardCompare-changeable">
+                    <div class="rsBundles-cardCompare-inner">
+                      <span class="rsBundles-check"></span>
+                    </div>
+                  </div>
+                    <!-- / End of interchangeable area -->
+                </div>
+                <div class="rsBundles-cardCTA-container"><a href="#" class="rsBundlesCTA-btn">Buy Now</a></div>
+              </div>
+
+
+              <div class="rsBundles-card">
+                <div class="rsBundles-cardName">Premium</div>
+                <div class="rsBundles-cardCompare-container">
+                  <!-- Interchangeable area -->
+                  <!-- Set 1 -->
+                  <div class="rsBundles-cardCompare-changeable rsBundles-active">
+                    <div class="rsBundles-cardCompare-inner">
+                      Dell PowerEdge with Dual Intel (2.5GHz / 12 cores)
+                    </div>
+                    <div class="rsBundles-cardCompare-inner">
+                      <span class="rsBundles-check"></span>
+                    </div>
+                    <div class="rsBundles-cardCompare-inner">
+                      none
+                    </div>
+                    <div class="rsBundles-cardCompare-inner">
+                      <span class="rsBundles-price">$549</span> /m
+                    </div>
+                  </div>
+                  <!-- Set 2 -->
+                  <div class="rsBundles-cardCompare-changeable">
+                    <div class="rsBundles-cardCompare-inner">
+                      <ul class="rsBundles-list">
+                        <li>Test/dev</li>
+                        <li>File servers</li>
+                        <li>Back-office application</li>
+                        <li>Email, CRM solutions, terminal services and medium public-facing websites</li>
+                      </ul>
+                    </div>
+                    <div class="rsBundles-cardCompare-inner">
+                      64 GB
+                    </div>
+                    <div class="rsBundles-cardCompare-inner">
+                      5x 600GB 15K SAS
+                    </div>
+                    <div class="rsBundles-cardCompare-inner">
+                      <span class="rsBundles-check"></span>
+                    </div>
+                  </div>
+                  <!-- Set 3 -->
+                  <div class="rsBundles-cardCompare-changeable">
+                    <div class="rsBundles-cardCompare-inner">
+                      <span class="rsBundles-check"></span>
+                    </div>
+                  </div>
+                    <!-- / End of interchangeable area -->
+                </div>
+                <div class="rsBundles-cardCTA-container"><a href="#" class="rsBundlesCTA-btn">Buy Now</a></div>
+              </div>
+
+
+              <div class="rsBundles-card">
+                <div class="rsBundles-cardName">MS SQL</div>
+                <div class="rsBundles-cardCompare-container">
+                  <!-- Interchangeable area -->
+                  <!-- Set 1 -->
+                  <div class="rsBundles-cardCompare-changeable rsBundles-active">
+                    <div class="rsBundles-cardCompare-inner">
+                      Dell PowerEdge with Intel (2.5GHz / 6 cores)
+                    </div>
+                    <div class="rsBundles-cardCompare-inner">
+                      <span class="rsBundles-check"></span>
+                    </div>
+                    <div class="rsBundles-cardCompare-inner">
+                      MS SQL Standard 2016
+                    </div>
+                    <div class="rsBundles-cardCompare-inner">
+                      <span class="rsBundles-price">$999</span> /m
+                    </div>
+                  </div>
+                  <!-- Set 2 -->
+                  <div class="rsBundles-cardCompare-changeable">
+                    <div class="rsBundles-cardCompare-inner">
+                      <ul class="rsBundles-list">
+                        <li>Custom applications using Microsoft SQL for backend database (including production, staging and test/dev)</li>
+                        <li>SharePoint</li>
+                        <li>Email applications (Exchange)</li>
+                        <li>WCM and ERP applications (Sitecore, Dynamics)</li>
+                      </ul>
+                    </div>
+                    <div class="rsBundles-cardCompare-inner">
+                      32 GB
+                    </div>
+                    <div class="rsBundles-cardCompare-inner">
+                      32 GB
+                    </div>
+                    <div class="rsBundles-cardCompare-inner">
+                      <span class="rsBundles-check"></span>
+                    </div>
+                  </div>
+                  <!-- Set 3 -->
+                  <div class="rsBundles-cardCompare-changeable">
+                    <div class="rsBundles-cardCompare-inner">
+                      <span class="rsBundles-check"></span>
+                    </div>
+                  </div>
+                    <!-- / End of interchangeable area -->
+                </div>
+                <div class="rsBundles-cardCTA-container"><a href="#" class="rsBundlesCTA-btn">Buy Now</a></div>
+              </div>
+
+              <!-- no slide optional card -->
+              <div class="rsBundles-card" data-rs-bundles="no-slide">
+                <div class="rsBundles-cardName">Customized</div>
+                <div class="rsBundles-cardCompare-container">
+                  <!-- Interchangeable area -->
+                  <!-- Set 1 -->
+                  <div class="rsBundles-cardCompare-changeable rsBundles-active">
+                      <div class="rsBundles-cardCompare-noSlide">
+                        Unique business requirements or compliance concerns? Let our architects create a customized solution built on:
+                        <ul class="rsBundles-list">
+                          <li>Dedicated Servers</li>
+                          <li>Storage</li>
+                          <li>Databases</li>
+                          <li>Networking</li>
+                          <li>Security</li>
+                        </ul>
+                      </div>
+                  </div>
+                    <!-- / End of interchangeable area -->
+                </div>
+                <div class="rsBundles-cardCTA-container"><a href="#" class="rsBundlesCTA-btn">Chat Now</a></div>
+              </div>
+
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+      <div class="section">
+        <div class="container">
+
+        </div>
+      </div>
+      <div class="section section-odd">
+        <div class="container">
+
+        </div>
+      </div>
+      <div class="section">
+        <div class="container">
+
+        </div>
+      </div>
+      <div class="section section-odd">
+        <div class="container">
+
+        </div>
+      </div>
+
+      <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+      <script src="<%- path %>js/app.min.js" charset="utf-8"></script>
+      <script type="text/javascript">
+        $('.rsBundles-legendContainer').sticky({topSpacing:0});
+      </script>
   </body>
 </html>

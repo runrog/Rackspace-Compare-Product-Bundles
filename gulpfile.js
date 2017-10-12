@@ -9,6 +9,10 @@ const rename = require('gulp-rename');
 const concat = require('gulp-concat');
 const minify = require('gulp-minify');
 const ejs = require('gulp-ejs');
+const fs = require('fs');
+const cloudfiles = require('gulp-cloudfiles');
+
+const rackspace = JSON.parse(fs.readFileSync('./rackspace.json'));
 
 const reload = browserSync.reload;
 
@@ -41,16 +45,34 @@ const jsTask = function buildJS() {
   });
 };
 
+const rackspaceFiles = function buildJS() {
+  const container = 'http://b908c4040f36e92b6c1d-5868806ce06e7becdec4f0e74f1f735c.r92.cf1.rackcdn.com/';
+  const options = {
+    uploadPath: 'static/bundle-compare/',
+  };
+  return gulp.src('./dist/**', { read: false })
+  .pipe(cloudfiles(rackspace, options))
+  .on('end', () => {
+    console.log(`Successfully pushed to cloudfiles: Static URL: \x1b[33m${container}${options.uploadPath}index.html`);
+  });
+};
+
 gulp.task('build-sass', sassTask);
 gulp.task('build-js', jsTask);
 
 gulp.task('build-dist', () => {
   gulp.src('index.ejs')
    .pipe(ejs({}, {}, { ext: '.html' }))
-   .pipe(gulp.dest('./dist'));
-  // run sass/js tasks
-  sassTask();
-  jsTask();
+   .pipe(gulp.dest('./dist'))
+   .on('end', () => {
+     console.log('Successfully Built ejs');
+     // run sass/js tasks
+     sassTask();
+     jsTask();
+     setTimeout(() => {
+       rackspaceFiles();
+     }, 1000);
+   });
 });
 
 gulp.task('browser-sync', ['nodemon'], () => {

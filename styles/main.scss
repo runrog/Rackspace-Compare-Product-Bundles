@@ -1,6 +1,13 @@
 @import url(https://fonts.googleapis.com/css?family=Roboto);
+@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700);
+@import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css);
 $baseColor: #eee;
 $bodyFont: 'Roboto', sans-serif;
+$rackspace-red: #c40022;
+$cta-green: #5da833;
+$desktop: 'only screen and (min-width : 993px)';
+$tablet: 'only screen and (min-width:601px) and (max-width:992px)';
+$mobile: 'only screen and (min-width:50px) and (max-width:600px)';
 
 * {
   box-sizing: border-box;
@@ -9,7 +16,301 @@ $bodyFont: 'Roboto', sans-serif;
 body {
   background-color: $baseColor !important;
   color: #596167;
-  font-family: $bodyFont;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 300;
   padding-top: 50px;
   text-align: center;
+}
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+@mixin clear-fix() {
+  &:after {
+   clear: both;
+   content: '';
+   display: table;
+ }
+
+ &:before {
+   clear: both;
+   content: '';
+   display: table;
+ }
+}
+
+@mixin flex-center-all() {
+  -ms-flex-align: center;
+  -ms-flex-pack: center;
+  -webkit-box-align: center;
+  -webkit-box-pack: center;
+  align-items: center;
+  display: -ms-flexbox;
+  display: -webkit-box;
+  display: flex;
+  justify-content: center;
+}
+
+.section {
+  @include clear-fix;
+  float: left;
+  padding: 20px;
+  min-height: 200px;
+  width: 100%;
+}
+
+.section-odd {
+  background-color: white;
+}
+
+.container {
+  @include clear-fix;
+  margin: 0 auto;
+  min-height: 10px;
+  width: 80%;
+}
+
+.rsBundles-container {
+  @include clear-fix;
+  float: left;
+  min-height: 10px;
+  width: 100%;
+}
+
+.rsBundles-legendContainer {
+  @include clear-fix;
+  display: flex;
+  float: left;
+  margin-bottom: 20px;
+  min-height: 40px;
+  width: 100%;
+}
+
+.is-sticky {
+  .rsBundles-centerKeys {
+    border-bottom: 2px solid $rackspace-red;
+  }
+}
+
+.rsBundles-leftArrow {
+  display: inline-block;
+  float: left;
+  padding: 5px;
+  visibility: hidden;
+  width: 20%;
+
+  a {
+    color: #666666;
+    font-family: 'FontAwesome';
+    font-size: 22pt;
+    text-decoration: none;
+  }
+}
+
+.rsBundles-leftArrow-icon {
+  float: right;
+  margin-right: 10px;
+  &:before {
+    content: '\f0d9'
+  }
+}
+
+.rsBundles-centerKeys {
+  background-color: #f2f2f2;
+  display: inline-block;
+  float: left;
+  padding: 5px 0 5px 5px;
+  width: 65%;
+}
+
+.rsBundles-centerKeys-changeable {
+  @include clear-fix();
+  display: none;
+  float: left;
+  height: 100%;
+  min-height: 10px;
+  padding: 5px 0;
+  width: 100%;
+}
+
+.rsBundles-centerKeys-inner {
+  border-right: 1px solid #ccc;
+  display: inline-block;
+  float: left;
+  min-height: 5px;
+  width: 25%;
+
+  &:last-child {
+    border-right: 0;
+  }
+}
+
+.rsBundles-rightArrow {
+  display: inline-block;
+  float: left;
+  padding: 5px;
+  visibility: hidden;
+  width: 15%;
+
+  a {
+    color: #666666;
+    font-family: 'FontAwesome';
+    font-size: 22pt;
+    text-decoration: none;
+  }
+}
+
+.rsBundles-rightArrow-icon {
+  float: left;
+  margin-left: 10px;
+  &:before {
+    content: '\f0da'
+  }
+}
+
+.rsBundles-check {
+  &:before {
+    color: $cta-green;
+    content: '\f00c';
+    font-family: 'FontAwesome';
+    font-size: 16pt;
+  }
+}
+
+.rsBundles-activeArrow {
+  visibility: visible;
+}
+
+.rsBundles-tableContainer {
+  @include clear-fix;
+  float: left;
+  width: 100%;
+}
+
+.rsBundles-card {
+  @include clear-fix;
+  border: 1px solid #ccc;
+  display: flex;
+  float: left;
+  margin-bottom: 20px;
+  min-height: 150px;
+  width: 100%;
+}
+
+.rsBundles-cardName {
+  @include flex-center-all();
+  border-right: 1px solid #ccc;
+  color: $rackspace-red;
+  float: left;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 24pt;
+  font-weight: 600;
+  padding: 15px;
+  text-align: center;
+  width: 20%;
+}
+
+.rsBundles-cardCompare-container {
+  background-color: #f7f7f7;
+  display: inline-block;
+  float: left;
+  padding: 20px 0 20px 5px;
+  width: 65%;
+}
+
+.rsBundles-price {
+  font-size: 20pt;
+  font-weight: 600;
+}
+
+.rsBundles-cardCTA-container {
+  @include flex-center-all();
+  background-color: #f7f7f7;
+  float: left;
+  padding: 5px;
+  width: 15%;
+}
+
+.rsBundlesCTA-btn {
+  background-color: $cta-green;
+  color: white;
+  display: inline-block;
+  padding: 10px 30px;
+  text-align: center;
+  text-decoration: none;
+
+  &:hover {
+    background: darken($cta-green, 5);
+    transition-duration: .3s;
+  }
+}
+
+.rsBundles-cardCompare-changeable {
+  @include clear-fix();
+  display: none;
+  float: left;
+  height: 100%;
+  min-height: 10px;
+  padding: 5px 0;
+  width: 100%;
+}
+
+.rsBundles-active {
+  display: flex;
+}
+
+.rsBundles-cardCompare-inner {
+  @include flex-center-all();
+  border-right: 1px solid #ccc;
+  float: left;
+  min-height: 5px;
+  padding: 15px;
+  width: 25%;
+}
+
+.rsBundles-cardCompare-noSlide {
+  border-right: 1px solid #ccc;
+  float: left;
+  padding: 0 20px;
+  text-align: left;
+  width: 100%;
+}
+
+.rsBundles-list {
+  margin: 0;
+  padding: 0px 20px;
+  text-align: left;
+}
+
+.rsBundles-bullets {
+  @include flex-center-all();
+  margin-bottom: 10px;
+  min-height: 5px;
+}
+
+.rsBundles-bullet {
+  background-color: #ccc;
+  display: inline-block;
+  height: 2px;
+  margin-right: 10px;
+  width: 25px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.rsBundles-bullet-active {
+  background-color: $rackspace-red;
+}
+
+@media #{$mobile} {
+
+}
+
+@media #{$tablet} {
+
 }
